@@ -169,16 +169,47 @@ a{
     cursor: pointer;
 }
 .song .details .footer i:hover{
-    animation: rotate 0.5s linear;
+
 }
 .illustrate{
     width: 40%;
 }
-@keyframes rotate {
+#eyes{
+    animation: scaling 2s infinite alternate ease-in;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#flower{
+    animation: waving 2s infinite alternate linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#sing{
+    animation: upDown 1s infinite alternate linear;
+}
+
+
+@keyframes upDown {
     from{
-        transform: rotate(0deg);
+        transform: translateY(-20px);
     }
     to{
-        transform: rotate(360deg);
+    transform: translateY(0);
+    }
+}
+@keyframes scaling {
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0.7);
+    }
+}
+@keyframes waving {
+    from{
+        transform: rotateX(0);
+    }
+    to{
+        transform: rotateX(45deg);
     }
 }
