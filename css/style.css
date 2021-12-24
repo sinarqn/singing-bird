@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+:root{
+    /*color palette*/
+    --back-color: #F2B995;
+    --red-color: #E22030;
+    --main-radius: 10px
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--back-color);
+    overflow: hidden;
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: unset;
+    text-decoration: none;
+}
+.text-red{
+    color: var(--red-color);
+}
+
+.blob{
+    z-index: -1;
+    position: absolute;
+    width: 40%;
+}
+.blob-1{
+    top: -25%;
+    left: -30px;
+}
+
+.blob-2{
+    bottom: -20%;
+    left: 30%;
+}
+
+.blob-3{
+    top: 0;
+    right: 0;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 2vh auto;
+    background: rgba( 255, 255, 255, 0.7 );
+    box-shadow: -3px 8px 28px 0 black;
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: var(--main-radius);
+    height: 96vh;
+    width: 98%;
+    padding: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+    height: 10%;
+    overflow: hidden;
+    font-family: 'Bakbak One', cursive;
+}
+.navbar h1{
+}
+.navbar ul{
+    display: flex;
+}
+.navbar li{
+    padding: 10px;
+    margin: auto 5px;
+}
+.navbar li a:hover{
+    border-bottom: 2px solid var(--red-color);
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    padding: 10px;
+    width: 100%;
+}
+.song{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.poster{
+    width: 40%;
+    padding: 16px;
+    background: rgba( 0, 0, 0, 0.5 );
+    box-shadow: -2px 5px 18px black;
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    color: #000;
+}
+.poster .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    font-family: 'Bakbak One', cursive;
+}
+.poster .footer .bi-pause-fill{
+    font-size: 21px;
+    margin: 0;
+    cursor: pointer;
+}
+.poster .footer .p-bar{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.poster .footer .fill{
+    background-color: var(--red-color);
+    width: 20%;
+    font-size: 10px;
+    height: 10px;
+    border-radius: var(--main-radius) 0 0 var(--main-radius);
+}
+.poster .footer .pointer{
+    background-color: var(--red-color);
+    width: 5%;
+    font-size: 10px;
+    height: 15px;
+    border-radius: var(--main-radius);
+    cursor: pointer;
+}
+.poster .footer .empty{
+    background-color: white;
+    width: 70%;
+    font-size: 10px;
+    height: 10px;
+    border-radius: 0 var(--main-radius) var(--main-radius) 0;
+}
+.poster .footer p{
+    font-weight: bold;
+}
+.song .details{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.song .details .footer{
+    display: flex;
+}
+.song .details .footer i{
+    margin: 10px;
+    cursor: pointer;
+}
+.song .details .footer i:hover{
+    animation: rotate 0.5s linear;
+}
+.illustrate{
+    width: 40%;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
